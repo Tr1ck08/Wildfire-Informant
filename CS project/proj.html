@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <style>
+        button:hover{
+            opacity: 0.8;
+        }
+        icon-close:hover{
+            opacity: 0.8;
+        }
+    </style>
+    <!--- nav links text, etc -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfires</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="proj.html"><img src="images/logo.png" alt="logo"></a>
+            <div class="links">
+                <ul>
+                    <li><a href ="file:///C:/Users/alexl/OneDrive/Documents/CS%20project/proj.html?">Home</a></li>
+                    <li><a href ="file:///C:/Users/alexl/OneDrive/Documents/CS%20project/Reported%20Wildfires.html">Forest Fires</a></li>
+                    <li><a href ="file:///C:/Users/alexl/OneDrive/Documents/CS%20project/About.html">About</a></li>
+                    <li><a href ="#" onclick="showLogin()">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text">
+            <h1>Wildfire Prevention</h1>
+            <p>Save the ecosystem and protect you and your family! Report wildfires or potential fire hazards near you!</p>
+        </div>
+
+        <!--login and registration-->
+        <div class="login" id="login" style="display:none">
+            <!--icon-->
+            <span class="icon-close" id="close" onclick="closeLogin()">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+            <!--Login-->
+            <div class="login-user" id="login-user" style="display:none">
+                <h1>Login</h1>
+                <form action=''>
+                    <div class="input">
+                        <span class="icon"></span>
+                        <input type="email" id="email" required placeholder="Enter Email"> <!-- Forces User to enter something -->
+                    </div>
+                    <div class="input">
+                        <span class="icon"></span>
+                        <input type="Password" required placeholder="Enter Password">
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href =''>Forgot Password</a>
+                    </div>
+                     
+                    <div class="login-register">
+                    <button type='submit' class="button">Login</button>
+                    <p>Create an account <a href='#', class="registerlink", onclick="switchRegister()">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!--Registration-->
+            <div class="register-user" id="register-user" style="display:none">
+                <h1>Register</h1>
+                <form action=''>
+                    <div class="input">
+                        <span class="icon"></span>
+                        <input type="Username" required placeholder="Enter Username">
+                    </div>
+                    <div class="input">
+                        <span class="icon"></span>
+                        <input type="email" required placeholder="Enter Email">
+                    </div>
+                    <div class="input">
+                        <span class="icon"></span>
+                        <input type="Password" required placeholder="Enter Password">
+                    </div>
+                    <div class="terms-conditions">
+                        <label><input type="checkbox">Agree to terms and conditions</label>
+                        <a href ='file:///C:/Users/alexl/OneDrive/Documents/CS%20project/Terms%20and%20Conditions.html'>Terms and Conditions</a>
+                    </div>
+                     
+                    <div class="register-login">
+                    <button type='submit' class="button">Login</button>
+                    <p>Login into an account <a href='#', class="loginlink" onclick="switchLogin()">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--for icons and other scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function showLogin(){
+            document.getElementById("login-user").style.display = "block"
+            document.getElementById("login").style.display = "block"
+        }
+        function switchRegister(){
+            document.getElementById("register-user").style.display = "block";
+            document.getElementById("login-user").style.display = "none";
+            }
+        function switchLogin(){
+            document.getElementById("register-user").style.display = "none";
+            document.getElementById("login-user").style.display = "block";
+        }
+        function closeLogin(){
+            document.getElementById("login-user").style.display="none"
+            document.getElementById("login").style.display="none"
+            document.getElementById("register-user").style.display="none"
+        }
+    </script>
+</body>
+</html>

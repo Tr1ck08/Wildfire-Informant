@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    padding: 0.5% 1%;
+    justify-content: space-between;
+    align-items: top;
+}
+nav img{
+    width: 100px;
+}
+
+.links{
+    overflow: hidden;
+}
+.links ul li{
+    list-style: none;
+    padding: 10px 14px;
+    position: relative;
+    display: inline-block;
+}
+.links ul li a{
+    color:red;
+    text-decoration:none;
+    font-size: 20px;
+}
+
+.links a:hover{
+    color:black;
+}
+.links ul li:hover::after{
+    width: 100%;
+}
+.links ul li::after{
+    content:'';
+    width: 0%;
+    height: 0.5px;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.15s;
+}

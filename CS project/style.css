@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*headers*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("images/BG.gif");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*navigation*/
+nav{
+    display: flex;
+    padding: 0.5% 1%;
+    justify-content: space-between;
+    align-items: top;
+}
+nav img{
+    width: 100px;
+}
+
+.links{
+    overflow: hidden;
+}
+.links ul li{
+    list-style: none;
+    padding: 10px 14px;
+    position: relative;
+    display: inline-block;
+}
+.links ul li a{
+    color:white;
+    text-decoration:none;
+    font-size: 20px;
+}
+
+.links a:hover{
+    color:black;
+}
+.links ul li:hover::after{
+    width: 100%;
+}
+.links ul li::after{
+    content:'';
+    width: 0%;
+    height: 0.5px;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.15s;
+}
+
+/*Text*/
+.text{
+    width: 100%;
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text h1{
+    font-size: 75px;
+}
+
+.text p{
+    font-size: 25px;
+} 
+
+
+/*Login & register*/
+.login{
+    position: relative;
+    left: 1125px;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    border: 4px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(40px);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    padding: 1% 1%;
+    overflow: hidden;
+}
+
+.login-user h1{
+    font-size: 3em;
+    color: black;
+    text-align: center;
+}
+
+.register-user h1{
+    font-size: 3em;
+    color: black;
+    text-align: center;
+}
+
+.button{
+    width: 250px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: #162938;
+    color: white;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login .input input[type="username"], input[type="password"], input[type="email"]{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 100%;
+}
+
+.login .icon-close{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    top: 0;
+    right: 0;
+    width: 45px;
+    align-items: center;
+    height: 45px;
+    background-color: #162938;
+    color: white;
+    border-radius: 8px;
+    border-bottom-left-radius: 20px;
+    cursor:pointer;
+}
+
+.about h1{
+    font-size: 40px;
+}
+.about p{
+    font-size: 30px;
+}
